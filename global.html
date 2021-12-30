@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body>
+    <div class="arrowfavorite">
+      <img src="/chevron.png" alt="" class="favimg" />
+    </div>
+    <div class="favorites">
+      <h1>Favorite Food</h1>
+      <div class="favfood"></div>
+    </div>
+    <div class="all">
+      <header>
+        <div class="logo-side">
+          <img src="/recipes.png" alt="" class="logo" />
+          <h2 class="logo-text">YourRecipe</h2>
+        </div>
+
+        <img src="/search.png" alt="" class="searchEl" />
+      </header>
+      <div class="in-area">
+        <input class="input" type="text" />
+        <img class="cross" src="/cross.png" alt="" />
+      </div>
+      <div class="categories"></div>
+      <div class="daily-wrapper">
+        <section class="daily-recipe">
+          <!--
+          
+          
+            -Add favorite button and add the list of favorites on the side (arrow to slide the favorites)
+            -once clicked on favorite on the the meal the background of the arrow changes indicating adding a +1 favorite
+            -translateY down once clicked 
+          
+            
+        -->
+          <div>
+            <div class="image-part">
+              <p>Today's Recipe</p>
+              <div class="image"></div>
+            </div>
+            <div class="icons">
+              <ul>
+                <li class="recipe">
+                  <img src="/cook-book.png" alt="" height="40px" />
+
+                  <p>recipe</p>
+                </li>
+                <li class="ingredients-button">
+                  <img src="/ingredients.png" alt="" height="40px" />
+
+                  <p>ingredients</p>
+                </li>
+                <li>
+                  <a class="youtube youtube-link" href="" target="_blank"
+                    ><img src="/youtube.png" alt="" height="40px" />
+                    <p>
+                      video <br />
+                      Tutorial
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="discription"></div>
+            <div class="ingredients">
+              <ul class="ingredients-El"></ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="border"></div>
+
+      <div class="by-category"></div>
+      <!--
+  -random recipe generatord
+  -add recipes once clicked on the category
+-->
+    </div>
+    <script src="global.js"></script>
+  </body>
+</html>

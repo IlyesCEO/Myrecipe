@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.all {
+  margin: 0;
+  padding: 0;
+}
+/*.by-category {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}*/
+
+.hearty {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: rgba(245, 222, 179, 0.486);
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+.h3 {
+  color: purple;
+  z-index: 8;
+}
+.favfood {
+  display: flex;
+  flex-direction: column;
+
+  width: 90%;
+  margin: auto;
+  font-family: "Kalam", cursive;
+  font-size: 25px;
+  max-height: 550px;
+  text-align: left;
+  overflow-y: scroll;
+}
+.favfood::-webkit-scrollbar {
+  width: 10px;
+  height: 300px;
+  border-radius: 50px;
+  background: rgb(48, 3, 3);
+}
+.favfood::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to left,
+    rgb(255, 230, 0),
+    rgb(255, 196, 0),
+    rgb(255, 145, 0)
+  );
+  border-radius: 50px;
+}
+.arrowfavorite {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  background: inherit;
+  padding: 0.5rem;
+  transition: 0.31s all ease-in-out;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.favorites {
+  position: fixed;
+  height: 100vh;
+  width: 30%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    to top left,
+    rgb(255, 230, 0),
+    rgb(255, 196, 0),
+    rgb(255, 145, 0)
+  );
+  opacity: 0.8;
+
+  transform: translateX(100%);
+  transition: 0.3s all;
+  text-align: center;
+}
+.favorites::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(224, 224, 224, 0.418),
+    rgba(0, 0, 0, 0.418)
+  );
+}
+.favorites h1 {
+  color: white;
+  font-weight: 600;
+  padding-top: 2rem;
+  font-family: "Kalam", cursive;
+  font-size: 25px;
+  letter-spacing: 0.15rem;
+}
+header {
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.726);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  margin-bottom: 0;
+}
+.in-area {
+  position: absolute;
+  right: -70%;
+  transition: 0.5s all ease-in-out;
+  /*right: 2%;*/
+  top: 4%;
+}
+.in-area img {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 15%;
+}
+input {
+  padding: 0.5rem;
+  font-size: 22px;
+  box-sizing: border-box;
+}
+.logo-side img {
+  padding-right: 1rem;
+}
+.logo-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: goldenrod;
+}
+.logo-text {
+  font-size: 22px;
+  font-family: "Kalam", cursive;
+}
+.singleEl {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  width: 25%;
+  cursor: pointer;
+  height: 130px;
+}
+.singleEl:hover {
+  background: rgb(255, 230, 0);
+  box-shadow: 0px 0px 5px black;
+}
+.single {
+  width: 100px;
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background: white;
+  border: 3px rgb(146, 124, 1) solid;
+  height: 100%;
+  margin-bottom: 0.5rem;
+}
+.category {
+  font-family: sans-serif;
+
+  word-wrap: break-word;
+}
+/*
+.single {
+  background: white;
+  width: 17%;
+  height: 90%;
+  border-radius: 50px;
+}*/
+.categories {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 1.5rem;
+  padding-bottom: 0.5rem;
+
+  width: 100%;
+  box-sizing: border-box;
+  height: 170px;
+  background: rgb(231, 231, 231);
+  display: flex;
+
+  align-items: center;
+  flex-direction: row;
+}
+.categories::-webkit-scrollbar {
+  width: 300px;
+  height: 10px;
+  border-radius: 50px;
+  background: rgb(48, 3, 3);
+}
+.categories::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to left,
+    rgb(255, 230, 0),
+    rgb(255, 196, 0),
+    rgb(255, 145, 0)
+  );
+  border-radius: 50px;
+}
+.daily-recipe,
+.Darecipe {
+  max-width: 500px;
+  display: flex;
+
+  flex-direction: column;
+}
+.image-part {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  box-shadow: 0px 0px 6px black;
+  margin: auto;
+  margin-top: 1rem;
+  width: 90%;
+  height: 400px;
+}
+.image {
+  width: 100%;
+  height: 85%;
+
+  position: relative;
+}
+
+.image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.7)
+  );
+}
+.category-name {
+  padding-left: 2rem;
+  font-size: 22px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.foodyimage {
+  width: 100%;
+  height: 85%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.foodyimage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.7)
+  );
+}
+.icons,
+.icon {
+  box-sizing: border-box;
+
+  width: 90%;
+  height: 70px;
+  display: flex;
+  padding-left: 0;
+  transform: translateY(-100%);
+  margin: auto;
+  justify-content: flex-start;
+  background: rgb(222, 223, 222);
+}
+.icons a,
+.icon a {
+  text-decoration: none;
+  padding-right: 0.1rem;
+  color: black;
+}
+.icons ul,
+.icon ul {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+
+  justify-content: space-between;
+}
+.icons li,
+.icon li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 65px;
+  justify-content: center;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+li:hover {
+  background: white;
+}
+li p {
+  padding-left: 0.2rem;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.youtube {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-right: none;
+}
+
+.border {
+  text-align: center;
+  font-family: "Kalam", cursive;
+  font-size: 25px;
+  padding: 0.4rem 0;
+  max-height: 5rem;
+  width: 100%;
+  display: none;
+  background: linear-gradient(
+    to left,
+    rgb(255, 230, 0),
+    rgb(255, 196, 0),
+    rgb(255, 145, 0)
+  );
+  box-shadow: 0px 0px 2px 2px rgb(255, 196, 0);
+}
+.image-part p {
+  position: absolute;
+  background: rgb(212, 211, 211);
+  padding: 0.5rem 4rem 0.5rem 1rem;
+}
+.discription,
+.Cat-discription {
+  display: none;
+  transform: translateY(-20%);
+
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  padding: 2rem;
+  max-height: 300px;
+  overflow-y: scroll;
+  width: 100%;
+  letter-spacing: 0.125rem;
+  line-height: 1.5rem;
+  font-family: sans-serif;
+  background: wheat;
+}
+.discription::-webkit-scrollbar,
+.Cat-discription::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 50px;
+  background: rgb(48, 3, 3);
+}
+.discription::-webkit-scrollbar-thumb,
+.Cat-discription::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to left,
+    rgb(30, 255, 0),
+    rgb(166, 255, 0),
+    rgb(251, 255, 0)
+  );
+  border-radius: 50px;
+}
+
+.ingredients,
+.cutty {
+  display: none;
+  transform: translateY(-10%);
+}
+.ingredients ul,
+.cutty ul {
+  list-style: none;
+  display: block;
+
+  padding-left: 0;
+  background: rgb(212, 211, 211);
+}
+.ingredients li,
+.cutty li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 1px black solid;
+}
+.ingredients li:hover {
+  background: white;
+}
+.Cat-ingredients {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .favorites {
+    width: 80%;
+    z-index: 5;
+  }
+  .arrowfavorite {
+    z-index: 8;
+    top: 0;
+    left: 50%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .daily-recipe,
+  .Darecipe {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    align-items: center;
+  }
+
+  .ingredients,
+  .cutty {
+    margin-left: 2rem;
+  }
+  .discription,
+  .Cat-discription {
+    width: 90%;
+    margin-left: 2rem;
+  }
+  .icon,
+  .icons,
+  .image-part {
+    width: 100%;
+  }
+  .ingredients ul,
+  .cutty ul {
+    width: 50vw;
+    padding-left: 0;
+    max-height: 50vh;
+    overflow-y: scroll;
+  }
+  .ingredients ul::-webkit-scrollbar,
+  .cutty ul::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 50px;
+    background: rgb(48, 3, 3);
+  }
+  .ingredients ul::-webkit-scrollbar-thumb,
+  .cutty ul::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to left,
+      rgb(255, 230, 0),
+      rgb(255, 196, 0),
+      rgb(255, 145, 0)
+    );
+    border-radius: 50px;
+  }
+}
+
+.Cat-discription {
+  display: none;
+}
+.cutty {
+  display: none;
+}

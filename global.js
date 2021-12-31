@@ -27,11 +27,11 @@ let favfood = document.querySelector(".favfood");
 
 arrowfavorite.addEventListener("click", () => {
   if (favorites.style.transform == "translateX(100%)") {
-    favimg.src = "/icons/cross.png";
+    favimg.src = "/cross.png";
     favorites.style.transform = "translateX(0%)";
     arrowfavorite.style.transform = "translateX(-29.5vw)";
   } else {
-    favimg.src = "/icons/chevron.png";
+    favimg.src = "/chevron.png";
     arrowfavorite.style.transform = "translateX(0vw)";
     favorites.style.transform = "translateX(100%)";
   }
